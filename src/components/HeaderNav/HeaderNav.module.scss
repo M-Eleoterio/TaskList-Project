@@ -1,0 +1,99 @@
+.headerContainer{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > nav{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        justify-content: center;
+
+        & > a{
+            margin-right: 1rem;
+            text-decoration: none;
+            color: var(--cinza-escuro);
+            position: relative;
+
+            &:hover{
+                &::before{
+                    width: 100%;
+                }
+            }
+
+            &::before{
+                content: "";
+                width: 0;
+                height: 1px;
+                background-color: #121212;
+                position: absolute;
+                left: 0;
+                bottom: -.25rem;
+                transition: .75s;
+            }
+        }
+    }
+
+    & > .menuButton{
+        background-image: url("../../assets/icons/menuIcon.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    & > .themeButton{
+        background-image: url("../../assets/icons/moonIcon.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        width: 1.75rem;
+        height: 1.75rem;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    & > div{
+        align-items: center;
+        display: flex;
+        & > div{
+            background-image: url("../../assets/icons/profileIcon.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 1.75rem;
+            height: 1.75rem;
+        }
+
+        & > p{
+            font-size: 14px;
+            margin-left: .5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .headerContainer{
+        & > .menuButton{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .headerContainer{
+        & > .themeButton, & > nav{
+            display: none;
+        }
+    }
+}

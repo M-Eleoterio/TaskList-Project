@@ -1,13 +1,13 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 :root{
   /* cores */
+  --cinza-escuro : "#121212";
   /* fontes */
   --monteserrat: 'Montserrat', sans-serif;
 }
 
 *{
   font-family: var(--monteserrat);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
