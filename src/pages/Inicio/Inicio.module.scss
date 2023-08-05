@@ -4,6 +4,7 @@
     align-items: center;
     padding: 1.5rem 1rem;
     position: relative;
+    transition: 1s;
 
     &::before{
         content: "";
@@ -18,10 +19,13 @@
         transform: rotate(40deg);
         left: 1rem;
         top: 20%;
-
+        filter: blur(2px);
+        opacity: 50%;
         animation: formAnim 10s linear infinite;
+        transition: 1s;
     }
     &::after{
+        transition: 1s;
         content: "";
         width: 150px;
         height: 150px;
@@ -34,7 +38,8 @@
         transform: rotate(40deg);
         right: 1rem;
         top: 60%;
-
+        filter: blur(2px);
+        opacity: 80%;
         animation: formAnim 10s linear reverse infinite;
     }
 
@@ -94,9 +99,12 @@
 
         &::before{
             left: -4rem;
+            filter: none;
+
         }
         &::after{
             right: -4rem;
+            filter: none;
         }
 
         & > .textContainer{
@@ -132,5 +140,99 @@
     
     100%{
         transform: translate(2rem, -2rem);
+    }
+}
+
+.motivosContainer{
+    margin: 2rem 0;
+
+    & > h2{
+        text-align: center;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    & > ul{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.bannerContainer{
+    border-radius: 10px;
+    margin: 3rem 10%;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    & > .image{
+        width: 100%;
+        height: 200px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 0;
+    }
+    & > div{
+        
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        & > h3{
+            font-weight: 400;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        & > button{
+            background-color: transparent;
+            border: none;
+            outline: 0;
+            border: 1px solid #121212;
+            padding: .5rem 1rem;
+            border-radius: 5px;
+            margin-top: 1.5rem;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .bannerContainer{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        & > div{
+            width: 40%;
+        }
+
+        & > .image{
+            width: 50%;
+            margin-left: 1rem;
+        }
+    }
+}
+
+.footer{
+    margin-top: 1.5rem;
+    padding: .5rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .footer{
+        position: absolute;
+        bottom: 0;
     }
 }

@@ -4,7 +4,7 @@ import styles from './Inicio.module.scss'
 
 export default function Inicio() {
     return (
-        <div>
+        <div style={{overflow: 'hidden'}}>
             <HeaderNav></HeaderNav>
             <section className={styles.principalBanner}>
                 <div className={styles.textContainer}>
@@ -17,6 +17,7 @@ export default function Inicio() {
                 </div>
                 <div className={styles.imageContainer}></div>
             </section>
+            <p className={styles.footer}>©️ nome do site</p>
         </div>
     )
 }
