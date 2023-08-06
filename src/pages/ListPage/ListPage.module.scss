@@ -1,0 +1,70 @@
+.listPage{
+    margin: 0 2rem;
+    & > div{
+        width: 100%;
+        background-color: #EDEAEA;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .5rem;
+        position: relative;
+        border-radius: 10px;
+
+        & > h1{
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        & > button{
+            background-image: url("../../assets/icons/plus-circle.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-color: transparent;
+            width: 25px;
+            height: 25px;
+            border: none;
+            outline: 0;
+            position: absolute;
+            right: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    & > section{
+        & > div{
+            position: relative;
+            & > button{
+                background-color: transparent;
+                border: none;
+                outline: 0;
+                margin: .75rem 0;
+                font-size: 14px;
+                cursor: pointer;
+                position: relative;
+
+                &::after{
+                    content: "";
+                    background-image: url(../../assets/icons/arrow-down.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    right: -1.5rem;
+                }
+            }
+            & > ul{
+                background-color: #FFF;
+                list-style: none;
+                position: absolute;
+                top: 2rem;
+                border: 1px solid black;
+                width: 50%;
+                padding: 1rem;
+                border-radius: 10px;
+            }
+        }
+    }
+}

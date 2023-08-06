@@ -5,7 +5,6 @@ import styles from './Inicio.module.scss'
 export default function Inicio() {
     return (
         <div style={{overflow: 'hidden'}}>
-            <HeaderNav></HeaderNav>
             <section className={styles.principalBanner}>
                 <div className={styles.textContainer}>
                     <div>
